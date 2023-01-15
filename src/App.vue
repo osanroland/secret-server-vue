@@ -4,7 +4,10 @@
 
 <template>
   <header>
+  
     <div class="wrapper">
+      <img class="logo" src="/src/assets/slogo.png" alt="Website logo" />
+      <h1 class="title">Secret Server</h1>
     </div>
   </header>
 
@@ -14,30 +17,31 @@
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
 
   .logo {
-    margin: 0 2rem 0 0;
+    height: 100px;
+    display: block;
+    padding-right: 2.5rem;
   }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+header {
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+}
+
+header .wrapper {
+  flex-wrap: wrap;
+  padding: 1rem;
+  place-items: center;
+  display: flex;
+  align-content: center;
+}
+
+.title {
+  font-size:2.5rem;
+  font-weight: 700;
+  color: var(--background-color);
 }
 </style>

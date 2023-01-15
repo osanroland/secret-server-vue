@@ -19,6 +19,8 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+
 }
 
 /* semantic color variables for this project */
@@ -34,6 +36,10 @@
   --color-text: var(--vt-c-text-light-1);
 
   --section-gap: 160px;
+
+  --background-color: #f3f3f3;
+  --color-btn-gr: #88c888;
+  --color-btn-hvr: #6ca06c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -71,4 +77,5 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
 }

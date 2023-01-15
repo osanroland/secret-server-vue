@@ -1,11 +1,27 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-
   font-weight: normal;
+}
+header {
+  display: flex;
+  width:100vw;
+  margin: 0 auto;
+  background-color: #2e2e2e;
+  margin-bottom:3rem;
+  box-shadow: 1px 4px 22px -5px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 1px 4px 22px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 4px 22px -5px rgba(0,0,0,0.75);
+}
+
+main {
+  place-items: center;
+  max-width: 1280px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:0 auto;
 }
 
 a,
@@ -24,12 +40,53 @@ a,
 @media (min-width: 1024px) {
   body {
     display: flex;
-    place-items: center;
   }
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+
+@media (max-width:768px)
+{
+    .form-group.inline {
+        display:block;
+    }
+
+    img.logo {
+        height:55px!important;
+        padding-right:1rem!important;
+    }
+
+    .title{
+        font-size:30px!important;
+    }
+
+    .secret-form{
+        max-width:85vw!important;
+    }
+
+    .form-group.inline{
+        text-align:center;
+    }
+    .field-group-inline {
+        margin-bottom:1rem;
+    }
+    .field-group-inline label{
+        display:block;
+    }
+    .button {
+        margin-top:1.5rem
+    }
+
+    label{
+        text-align:center
+    }
+    
+    header{
+        margin-bottom:1.5rem
+    }
+
+    h2.subtitle {
+        margin-bottom:1.5rem;
+        font-size:26px;
+    }
+    
 }

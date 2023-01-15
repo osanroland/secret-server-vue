@@ -1,7 +1,10 @@
 <template>
-    <h1>The message is: {{ secretText }}</h1>
-    <p>Remaining views: {{ remainingViews }}</p>
-    <p>Expires at: {{ expiresAt }}</p>
+    <div class="showSecret">
+        <h2>The message is:</h2>
+        <p class="secretText"> {{ secretText }}</p>
+        <p><strong>Remaining views: </strong> {{ remainingViews }}</p>
+        <p><strong>Expires at: </strong> {{ expiresAt }}</p>
+    </div>
 </template>
 <script>
 
@@ -30,7 +33,8 @@ export default {
                     this.showMessage(res.data)
                 })
                 .catch((error) => {
-                    
+                    let element = document.querySelector(".showSecret")
+                    element.innerHTML = '<p class="expired">This secret is no longer available!</p>'
                 }).finally(() => {
                     //Perform action in always
                 });
@@ -38,8 +42,30 @@ export default {
         showMessage(data) {
             this.secretText = data.secretText
             this.remainingViews = data.remainingViews
-            this.expiresAt = data.expires_at
+            this.expiresAt = data.expiresAt
         }
     }
 };
 </script>
+
+<style>
+h2{
+    font-size: 24px;
+}
+
+.showSecret {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.showSecret p {
+    font-weight: 500;
+}
+
+p.expired {
+    margin-top:3rem;
+    font-size: 22px;
+}
+</style>
